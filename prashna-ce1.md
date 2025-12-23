@@ -35,6 +35,32 @@ What are Kubernetes pods, deployments, and services, and how do they integrate w
 
 Provide a Terraform snippet to provision an AKS cluster with node pools. How would you use Ansible to deploy apps to K8s namespaces and roll out updates zero-downtime? Debug common issues like pod crashes or network policies using kubectl describe and logs in Bash/Python scripts.[^2_4][^2_5][^2_6][^2_3]
 
+## AIOps or MLOps
+AIOps vs. DevOps: AIOps applies ML to DevOps for proactive ops (e.g., root cause analysis via logs); DevOps is CI/CD-focused. Explain integration like using ML in Jenkins pipelines.​
+Data/Model Drift: Monitor input shifts (data drift) or performance decay (concept drift) with tools like Evidently AI; retrain models automatically. Python ML libraries, Kubernetes for model serving, and tools like Prometheus with AI extensions. Watch for questions blending DevOps (CI/CD, IaC) with AI (data drift, model monitoring) [ref1](https://github.com/Devinterview-io/mlops-interview-questions), [rerf1](https://hirevire.com/pre-screening-interview-questions/aiops-artificial-intelligence-for-it-operations-engineer)​
+Ethical AI in Ops: Discuss bias detection in anomaly models and GDPR compliance for production ML. [ref](https://www.lockedinai.com/blog/top-25-mlops-interview-questions-2025)​
+
+### These test AI-driven IT ops; expect coding in Python for anomaly detection.
+- How to detect anomalies in time-series metrics?
+- Use isolation forests or Prophet for forecasting; integrate with Prometheus/Grafana alerts. Sample: from sklearn.ensemble import IsolationForest on CPU usage data.​
+- Implement ML for predictive scaling in Kubernetes.
+- Train LSTM on historical metrics; deploy via Kserve for auto-scaling HPA rules.​
+- NLP for log analysis? BERT for parsing unstructured logs into events; tools like Splunk ML or ELK with OpenAI embeddings [ref](https://hirevire.com/pre-screening-interview-questions/aiops-artificial-intelligence-for-it-operations-engineer)
+
+### MLOPS
+- CI/CD pipeline for ML models.
+Use Kubeflow or MLflow: version data (DVC), train/test (GitHub Actions), deploy (SeldonCore), monitor (Arize).​
+
+- Model versioning and reproducibility.
+Track with MLflow or Weights & Biases; store artifacts in S3, use Docker for env consistency.​
+
+- Handle large datasets integrity.
+Data lineage with Apache Atlas; quality checks via Great Expectations before training
+
+- AIOps = Dynatrace, Moongsoft, Prometheus ML
+- MLOps = Kubeflow, Sagemaker, Vertex AI
+- AI DevOps = Terraform + MLflow, ArgoCD
+
 <div align="center">⁂</div>
 
 [^2_1]: https://www.datacamp.com/blog/cloud-engineer-interview-questions
